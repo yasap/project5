@@ -1,0 +1,34 @@
+.mainpage {
+    background-color: rgb(161, 209, 224);
+    font-style: italic;
+    height: 100%; 
+    width: 100%
+}
+.header{
+    background-color: rgba(160, 21, 21, 0.836);
+    font-family: serif;
+    color: white;
+    margin: 0 auto;
+    padding: 1em;
+}
+.nav-logo{
+    color: white;
+    font-weight: bold;
+    font-family:fantasy;
+    font-size:xx-large;
+
+}
+.nav-search{
+  overflow: hidden;
+  background-color: #fafafa;
+  float: left;
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+.cart{
+    color:white ;
+}
