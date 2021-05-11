@@ -4,18 +4,25 @@
     height: 100%; 
     width: 100%
 }
+
 .header{
     background-color: rgba(160, 21, 21, 0.836);
     font-family: serif;
     color: white;
     margin: 0 auto;
     padding: 1em;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content:space-between;
+    
 }
 .nav-logo{
     color: white;
     font-weight: bold;
     font-family:fantasy;
     font-size:xx-large;
+    
 
 }
 .nav-search{
@@ -25,10 +32,13 @@
   display: block;
   color: black;
   text-align: center;
-  padding: 14px 16px;
+  padding: 10px 14px;
+  margin-right: 200px;
   text-decoration: none;
   font-size: 17px;
+
 }
 .cart{
     color:white ;
+    
 }
