@@ -1,8 +1,7 @@
 .mainpage {
     background-color: rgb(161, 209, 224);
     font-style: italic;
-    height: 100%; 
-    width: 100%
+   
 }
 
 .header{
@@ -40,5 +39,22 @@
 }
 .cart{
     color:white ;
-    
+}
+.camera{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.camera .V-cam {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content:space-between;
+    margin: 10px;
+}
+.description {
+    margin: 30px;
+   text-align: center;
+   align-self: center;
+
 }
