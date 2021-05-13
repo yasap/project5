@@ -1,7 +1,6 @@
 .mainpage {
     background-color: rgb(161, 209, 224);
     font-style: italic;
-   
 }
 
 .header{
@@ -9,23 +8,20 @@
     font-family: serif;
     color: white;
     margin: 0 auto;
-    padding: 1em;
+    padding: 4em;
     display: flex;
     flex-direction: row;
     align-content: center;
-    justify-content:space-between;
-    
+    justify-content:space-between;    
 }
 .nav-logo{
     color: white;
     font-weight: bold;
     font-family:fantasy;
-    font-size:xx-large;
-    
-
+    font-size: 50px;
+    margin-left:20px;
 }
 .nav-search{
-  overflow: hidden;
   background-color: #fafafa;
   float: left;
   display: block;
@@ -35,7 +31,6 @@
   margin-right: 200px;
   text-decoration: none;
   font-size: 17px;
-
 }
 .cart{
     color:white ;
@@ -56,5 +51,22 @@
     margin: 30px;
    text-align: center;
    align-self: center;
-
+}
+.options{
+    display: flex;
+    flex: row;
+    align-items: center;
+    justify-content:space-around;
+}
+.footer {
+    background-color: rgba(160, 21, 21, 0.836);
+    height: 230px;
+}
+.footer a {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 20px;
+    color: white;
+    margin-left: 30px;
 }
