@@ -1,19 +1,20 @@
 .mainpage {
     background-color: rgb(161, 209, 224);
     font-style: italic;
-    size: 100%;
+   
 }
-
 .header{
     background-color: rgba(160, 21, 21, 0.836);
     font-family: serif;
     color: white;
     margin: 0 auto;
-    padding: 4em;
-    display: flex;
+    padding: 1em;   
+}
+.flex{ 
+       display: flex;
     flex-direction: row;
     align-content: center;
-    justify-content:space-between;    
+    justify-content:space-between; 
 }
 .nav-logo{
     color: white;
