@@ -45,13 +45,17 @@ body{
  margin: 0 auto;
  height: 150px;
  width: 300px;
+ margin-top: 8px;
 }
 .camera{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
- 
-}
+ }
+ .V-cam {
+     text-align: center;
+
+ }
 .camera .V-cam {
     display: flex;
     flex-direction: column;
@@ -59,6 +63,12 @@ body{
     justify-content:space-between;
     margin: 10px auto;
     border-bottom: 1px white solid;
+}
+.V-cam .icons {
+    display: flex;
+    flex-direction:row;
+    justify-content: space-around;
+    align-items: center;
 }
 .description {
     margin: 30px;
@@ -82,4 +92,9 @@ body{
     margin-left: 20px;
     color: white;
     margin-left: 30px;
+
+.detailimage{
+    
+
+    }
 }
