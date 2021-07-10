@@ -54,6 +54,7 @@ body{
  }
  .V-cam {
      text-align: center;
+     padding-bottom: 15px;
 
  }
 .camera .V-cam {
@@ -84,6 +85,7 @@ body{
 .footer {
     background-color: rgba(160, 21, 21, 0.836);
     height: 230px;
+   padding: 15px;
 }
 .footer a {
     display: flex;
@@ -92,6 +94,30 @@ body{
     margin-left: 20px;
     color: white;
     margin-left: 30px;
-
-
 }
+
+.Detailimage {
+ display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content:space-between;
+    margin: 10px auto;
+    width: 260px;
+    height: 180px;
+}
+#detaillist {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: space-between;
+}
+ .descriptions {
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   margin: 15px;
+ }
+  .basketicon {
+justify-content: left;
+color: darkorange;
+  }
