@@ -104,6 +104,7 @@ body{
     margin: 10px auto;
     width: 260px;
     height: 180px;
+    
 }
 #detaillist {
     display: flex;
@@ -118,6 +119,14 @@ body{
    margin: 15px;
  }
   .basketicon {
-justify-content: left;
-color: darkorange;
+justify-content: right;
+color: darkorange !important ;
   }
+
+  .h4 {
+    font-size: 30px;
+    font-family: monospace;
+    font-weight: bold;
+    justify-content: center;
+  }
+
