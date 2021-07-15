@@ -37,17 +37,14 @@ fetch("http://localhost:3000/api/cameras/" + cameraid).then(response => response
     basketicon.classList.add("basketicon");
         basketicon.classList.add("fa");
     basketicon.classList.add("fa-shopping-basket");
+     description.appendChild(basketicon);
     const storage = window.localStorage;
-    for (let i = 0; i < Camera.lenght; i++){
-        basketicon[i].addEventListener('click', () =>
-            cameraNumbers();
-    
-        )}
-function cameraNumbers() {
-    ler itemNumbers = localStorage.getItem('cameraNumbers');
-    itemNumbers = parseInt(itemNumbers);
-        localStorage.setItem("cameraNumbers", 1)
-}
-        description.appendChild(basketicon);
+    const numberOfCameras = document.createElement("h5");
+    const cart = (storage.getItem("cart") == null) ? JSON.parse(storage.getItem("cart")) : [];
+    numberOfCameras.textContent = Camera.length + "items in the basket";
+    basketicon.addEventListener('click', (Event) => {
+        
+    })
+       
         detailcontainer.appendChild(description);
     })
