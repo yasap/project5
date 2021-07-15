@@ -39,4 +39,12 @@ fetch("http://localhost:3000/api/cameras").then(response => response.json()).the
     });
   
 })
+    //  storage.setItem("cart", null);
+    // let cart = (storage.getItem("cart")) ? storage.getItem("cart") : [];
+    // basketicon.addEventListener('click', (Event) => {
+    //     // cart.push(Camera);
+    //     storage.setItem("cart", JSON.stringify(cart));
+    //     cart.forEach(Camera => {
+    //         sum += Camera.price;
+    //     })
     .catch(error => { console.error(error) });
