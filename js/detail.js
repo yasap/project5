@@ -35,16 +35,42 @@ fetch("http://localhost:3000/api/cameras/" + cameraid).then(response => response
 
     var basketicon = document.createElement("span");
     basketicon.classList.add("basketicon");
-        basketicon.classList.add("fa");
+    basketicon.classList.add("fa");
     basketicon.classList.add("fa-shopping-basket");
-     description.appendChild(basketicon);
+    description.appendChild(basketicon);
     const storage = window.localStorage;
-    const numberOfCameras = document.createElement("h5");
-    const cart = (storage.getItem("cart") == null) ? JSON.parse(storage.getItem("cart")) : [];
-    numberOfCameras.textContent = Camera.length + "items in the basket";
+     const cart = (storage.getItem("cart") !=null) ? JSON.parse(storage.getItem("cart")) :[];
+         const numberOfCamera = document.createElement("H5");
+    numberOfCamera.textContent = cart.length ;
     basketicon.addEventListener('click', (Event) => {
-        
+        cart.push(Camera);
+        storage.setItem("cart", JSON.stringify(cart));
     })
-       
+    let newItem = Camera;
+    newItem.count = 1;
+    var summary = [newItem];
+
+Camera.forEach((item,index) => {
+        if (index > 0) {
+            let currentIndex = 0;
+            var myItem = summary.filter((c, i) => {
+                if (Camera.id == c.id) {
+                    currentIndex = i;
+                    return c;
+                }
+            });
+            if (myItem.length > 0) {
+                myItem[0].count++;
+                summary[currentIndex] = myItem[0];
+            }
+            else {
+                Camera.count = 1;
+                summary.push(item);
+            }
+        }
+    })
+
+
+
         detailcontainer.appendChild(description);
     })
