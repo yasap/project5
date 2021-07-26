@@ -147,7 +147,7 @@ color: darkorange !important ;
     justify-content: center;
   }
 
-  .cartsum {
+  #cartsummary {
       display: flex;
       flex-direction: column;
       justify-content: space-around;

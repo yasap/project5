@@ -37,6 +37,7 @@ fetch("http://localhost:3000/api/cameras/" + cameraid).then(response => response
     basketicon.classList.add("basketicon");
     basketicon.classList.add("fa");
     basketicon.classList.add("fa-shopping-basket");
+    basketicon.href = "cart.html"
     description.appendChild(basketicon);
     const storage = window.localStorage;
      const cart = (storage.getItem("cart") !=null) ? JSON.parse(storage.getItem("cart")) :[];
@@ -46,15 +47,15 @@ fetch("http://localhost:3000/api/cameras/" + cameraid).then(response => response
         cart.push(Camera);
         storage.setItem("cart", JSON.stringify(cart));
     })
-    let newItem = Camera;
+    let newItem = cart;
     newItem.count = 1;
     var summary = [newItem];
 
-Camera.forEach((item,index) => {
+cart.forEach((item,index) => {
         if (index > 0) {
             let currentIndex = 0;
             var myItem = summary.filter((c, i) => {
-                if (Camera.id == c.id) {
+                if (cart.id == c.id) {
                     currentIndex = i;
                     return c;
                 }
@@ -64,7 +65,7 @@ Camera.forEach((item,index) => {
                 summary[currentIndex] = myItem[0];
             }
             else {
-                Camera.count = 1;
+                cart.count = 1;
                 summary.push(item);
             }
         }

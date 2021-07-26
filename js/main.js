@@ -46,15 +46,15 @@ const storage = window.localStorage;
         vcam.appendChild(icons);
          cameracontainer.appendChild(vcam); 
     });
-  let newItem = camera;
+  let newItem = cart;
     newItem.count = 1;
     var summary = [newItem];
 
-    camera.forEach((item, index)=>{
+    cart.forEach((item, index)=>{
         if (index > 0) {
             let currentIndex = 0;
             var myItem = summary.filter((c, i) => {
-                if (camera.id == c.id) {
+                if (cart.id == c.id) {
                     currentIndex = i;
                     return c;
                 }
@@ -64,7 +64,7 @@ const storage = window.localStorage;
                 summary[currentIndex] = myItem[0];
             }
             else {
-                camera.count = 1;
+                cart.count = 1;
                 summary.push(item);
             }
         }
