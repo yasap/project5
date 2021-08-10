@@ -37,15 +37,17 @@ fetch("http://localhost:3000/api/cameras/" + cameraid).then(response => response
     basketicon.classList.add("basketicon");
     basketicon.classList.add("fa");
     basketicon.classList.add("fa-shopping-basket");
-    basketicon.href = "cart.html"
     description.appendChild(basketicon);
     const storage = window.localStorage;
      const cart = (storage.getItem("cart") !=null) ? JSON.parse(storage.getItem("cart")) :[];
          const numberOfCamera = document.createElement("H5");
-    numberOfCamera.textContent = cart.length ;
+    numberOfCamera.textContent = cart.length;
+       const cartsize = document.getElementById("cartsize");
+    cartsize.textContent = cart.length ;
     basketicon.addEventListener('click', (Event) => {
         cart.push(Camera);
         storage.setItem("cart", JSON.stringify(cart));
+        cartsize.textContent = cart.length;
     })
     let newItem = cart;
     newItem.count = 1;
@@ -69,9 +71,12 @@ cart.forEach((item,index) => {
                 summary.push(item);
             }
         }
-    })
-
-
-
+})
         detailcontainer.appendChild(description);
-    })
+})
+
+    
+var carticon = document.getElementById("carticon");
+carticon.addEventListener("click", function (Event) {
+    window.location.pathname = "/cart.html"
+})

@@ -1,6 +1,5 @@
 .mainpage {
     background-color: rgb(161, 209, 224);
-    font-style: italic;
 }
 body{
     margin: 0 auto;
@@ -18,13 +17,14 @@ body{
     align-content: center;
     justify-content:space-between; 
 }
-.nav-logo{
+a.nav-logo,.nav-logo{
     color: white;
     font-weight: bold;
-    font-family:fantasy;
+    font-family:fantasy !important;
     font-size: 50px;
     margin-right:60px;
     align-items: flex-start;
+    text-decoration: none !important
 }
 .nav-search{
   background-color: #fafafa;
@@ -145,11 +145,57 @@ color: darkorange !important ;
     font-family: monospace;
     font-weight: bold;
     justify-content: center;
-  }
+}
 
-  #cartsummary {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-around;
-  }
-
+.cartsum {
+    display: flex;
+    flex-direction:column;
+    margin-left: 15px;
+}
+#cart-order {
+    margin: 10px;
+}
+.totalsummary {
+background-color: rgb(27, 231, 8);
+ font-size: 30px;
+ margin: 15px 60px 5px 500px;
+width: 200px;
+ padding: 10px;
+}
+.cartsum h1 button{
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.remove{
+margin: -65px 50px 5px 500px;
+width: 200px;
+}
+.cartsum p{
+    font-weight: 700;
+    margin-left: 10px;
+}
+.cartsum span { 
+ margin: 10px;   
+ margin-bottom: 15px;
+}
+.eachtotal {
+    margin: -30px 50px 5px 500px;
+    font-weight: bold;
+    font-size:x-large;
+}
+.cartsum h5 {
+    font-size: 25px;
+}
+.proceed {
+    background-color:rgba(247, 158, 25, 0.961);
+    width: 150px;
+    height: 50px;
+    border-radius: 17%;
+    margin: 25px;
+    position: relative;
+    border: 3px solid black;
+   align-items: center;
+   justify-items: center;
+   margin-left: 250px;
+}

@@ -70,4 +70,10 @@ const storage = window.localStorage;
         }
     })
 })
-    .catch(error => { console.error(error) });
+ .catch(error => { console.error(error) });
+
+var carticon = document.getElementById("carticon");
+carticon.addEventListener("click", function (Event) {
+    window.location.pathname = "/cart.html"
+})
+
