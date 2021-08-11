@@ -29,25 +29,27 @@ var sum = 0;
 summary.forEach(product => {
     var amount = (product.price * product.count);
     sum = sum + amount;
+    var alignItem = document.createElement("div");
+    alignItem.classList.add("alignitems");
     var cartTitle = document.createElement("h5");
      cartTitle.textContent = product.name;
-    cart.appendChild(cartTitle);
-    var cartRemove = document.createElement("button");
-    cartRemove.classList.add("remove")
-    cartRemove.remove(product.count);
-     cartRemove.textContent = "Remove";
-     cart.appendChild(cartRemove);   
+    alignItem.appendChild(cartTitle); 
 var cartPrice = document.createElement("p");
-     cartPrice.textContent = ("£" +"" + product.price);
-     cart.appendChild(cartPrice);
+     cartPrice.textContent = ("Price: £" +"" + product.price);
+     alignItem.appendChild(cartPrice);
     var cartQuantity = document.createElement("span");
-    cartQuantity.classList.add("quantity");
      cartQuantity.textContent =("Quantity:" +  "" + product.count);
-    cart.appendChild(cartQuantity);
+    alignItem.appendChild(cartQuantity);
     var eachTotal = document.createElement("div");
-    eachTotal.classList.add("eachtotal");
+    eachTotal.classList.add("eachTotal");
     eachTotal.textContent = "£" + amount;
-    cart.appendChild(eachTotal);
+    alignItem.appendChild(eachTotal);
+    var cartRemove = document.createElement("button");
+    cartRemove.classList.add("fa");
+        cartRemove.classList.add("fa-trash");
+    cartRemove.remove(product.count);
+    alignItem.appendChild(cartRemove);  
+    cart.appendChild(alignItem);
  
 })
 var totalsummary = document.createElement("h2");
@@ -55,10 +57,16 @@ totalsummary.classList.add("totalsummary")
 totalsummary.textContent = "Total: £" + sum;
 cart.appendChild(totalsummary);
 
-var proceed = document.createElement("button");
-proceed.classList.add("proceed");
-proceed.textContent = "SUBMIT";
-proceed.addEventListener("click", function (Event) {
-    window.location.pathname = "/submit.html"
+var form = document.getElementById("cart-order");
+form.addEventListener("submit", function (event) {
+    event.preventDefault();
+    var customerName = form.name.value;
+    var customerCard = form.card_number.value;
+    var customerAddress = form.address.value;
+    console.log(customerAddress);
+    var contact = { name: customerName, card_number: customerCard, address: customerAddress };
+    var products = cartItems;
+    var url = "http://localhost:3000/api/cameras/order";
+    var body = { contact: contact , products: products };
 })
-    cart.appendChild(proceed);
+  

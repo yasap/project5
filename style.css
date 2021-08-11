@@ -139,14 +139,6 @@ a.nav-logo,.nav-logo{
 justify-content: right;
 color: darkorange !important ;
   }
-
-  .h4 {
-    font-size: 50px;
-    font-family: monospace;
-    font-weight: bold;
-    justify-content: center;
-}
-
 .cartsum {
     display: flex;
     flex-direction:column;
@@ -158,9 +150,12 @@ color: darkorange !important ;
 .totalsummary {
 background-color: rgb(27, 231, 8);
  font-size: 30px;
- margin: 15px 60px 5px 500px;
-width: 200px;
- padding: 10px;
+ text-align: right;
+ justify-content: flex-end;
+ /* margin: 15px 60px 15px 500px; */
+/* width: 200px; */
+ padding:10px;
+ margin-right: 15px;
 }
 .cartsum h1 button{
     display: inline-flex;
@@ -171,31 +166,28 @@ width: 200px;
 margin: -65px 50px 5px 500px;
 width: 200px;
 }
-.cartsum p{
-    font-weight: 700;
-    margin-left: 10px;
-}
-.cartsum span { 
- margin: 10px;   
- margin-bottom: 15px;
-}
-.eachtotal {
-    margin: -30px 50px 5px 500px;
-    font-weight: bold;
-    font-size:x-large;
-}
 .cartsum h5 {
     font-size: 25px;
 }
 .proceed {
-    background-color:rgba(247, 158, 25, 0.961);
+    background-color:rgba(255, 155, 5, 0.961);
     width: 150px;
     height: 50px;
     border-radius: 17%;
     margin: 25px;
     position: relative;
     border: 3px solid black;
-   align-items: center;
-   justify-items: center;
-   margin-left: 250px;
+    align-items: center;
+    justify-items: center;
+    margin-left: 250px;
 }
+.alignitems {
+  display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    font-size:  20px;
+}
+/* .eachTotal {
+    font-size: 30px;
+} */
