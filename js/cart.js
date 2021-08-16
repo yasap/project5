@@ -46,8 +46,13 @@ var cartPrice = document.createElement("p");
     alignItem.appendChild(eachTotal);
     var cartRemove = document.createElement("button");
     cartRemove.classList.add("fa");
-        cartRemove.classList.add("fa-trash");
+    cartRemove.classList.add("fa-trash");
     cartRemove.remove(product.count);
+     cartRemove.addEventListener("click", (e) => {
+        summary.filter(p => {
+            return p._id != cameraid._id
+        })
+    })
     alignItem.appendChild(cartRemove);  
     cart.appendChild(alignItem);
  
