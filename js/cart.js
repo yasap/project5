@@ -31,20 +31,20 @@ summary.forEach(product => {
     sum = sum + amount;
     var alignItem = document.createElement("div");
     alignItem.classList.add("alignitems");
-    var cartTitle = document.createElement("h5");
+    var cartTitle = document.createElement("span");
      cartTitle.textContent = product.name;
     alignItem.appendChild(cartTitle); 
-var cartPrice = document.createElement("p");
-     cartPrice.textContent = ("Price: £" +"" + product.price);
+var cartPrice = document.createElement("span");
+     cartPrice.textContent = ( product.price);
      alignItem.appendChild(cartPrice);
     var cartQuantity = document.createElement("span");
-     cartQuantity.textContent =("Quantity:" +  "" + product.count);
+     cartQuantity.textContent =(product.count);
     alignItem.appendChild(cartQuantity);
-    var eachTotal = document.createElement("div");
+    var eachTotal = document.createElement("span");
     eachTotal.classList.add("eachTotal");
-    eachTotal.textContent = "£" + amount;
+    eachTotal.textContent = amount;
     alignItem.appendChild(eachTotal);
-    var cartRemove = document.createElement("button");
+    var cartRemove = document.createElement("span");
     cartRemove.classList.add("fa");
     cartRemove.classList.add("fa-trash");
     cartRemove.remove(product.count);
@@ -66,12 +66,24 @@ var form = document.getElementById("cart-order");
 form.addEventListener("submit", function (event) {
     event.preventDefault();
     var customerName = form.name.value;
-    var customerCard = form.card_number.value;
+    var customerEmail = form.email.value;
     var customerAddress = form.address.value;
-    console.log(customerAddress);
-    var contact = { name: customerName, card_number: customerCard, address: customerAddress };
-    var products = cartItems;
+    var customerCity = form.city.value;
+    var contact = { name: customerName, email: customerEmail, address: customerAddress, city: customerCity};
+    var myItems = JSON.parse(storage.getItem("cart"));
+    var products = myItems.map(item => {
+        return item._id;
+    })
     var url = "http://localhost:3000/api/cameras/order";
-    var body = { contact: contact , products: products };
+    var body = { contact: contact, products: products };
+    fetch(URL, { method: "post", body: JSON.stringify(body, headers, { "content-type": "application/json" })
+        .then(res => res.json())
+        .then(result => {
+            var orderId = result.orderId;
+            myorderid = result.orderId;
+            window.location.href = "/submit.html?order_id=" + orderId ;
+        })
+        .catch(error => {(console.error(error))})
+        });
 })
   
