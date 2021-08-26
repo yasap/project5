@@ -65,25 +65,24 @@ cart.appendChild(totalsummary);
 var form = document.getElementById("cart-order");
 form.addEventListener("submit", function (event) {
     event.preventDefault();
-    var customerName = form.name.value;
+    var customerFirstName = form.firstName.value;
+    var customerLastName = form.lastName.value;
     var customerEmail = form.email.value;
     var customerAddress = form.address.value;
     var customerCity = form.city.value;
-    var contact = { name: customerName, email: customerEmail, address: customerAddress, city: customerCity};
+    var contact = { firstName: customerFirstName, lastName: customerLastName, email: customerEmail, address: customerAddress, city: customerCity};
     var myItems = JSON.parse(storage.getItem("cart"));
     var products = myItems.map(item => {
         return item._id;
     })
     var url = "http://localhost:3000/api/cameras/order";
     var body = { contact: contact, products: products };
-    fetch(URL, { method: "post", body: JSON.stringify(body, headers, { "content-type": "application/json" })
+    fetch(url, { method: "post", body: JSON.stringify(body), headers: { "content-type": "application/json" } })
         .then(res => res.json())
         .then(result => {
             var orderId = result.orderId;
-            myorderid = result.orderId;
             window.location.href = "/submit.html?order_id=" + orderId ;
         })
         .catch(error => {(console.error(error))})
-        });
 })
   

@@ -21,12 +21,19 @@
     </div>
  <h1>YOUR ORDER IS CONFIRMED</h1>
  <H2>THANK YOU</H2>
+ <span id="orderid"></span>
           <div class="footer">
         <div class="nav-logo">Orinoco</div>
        <a class="text-color" href="http://contactus.com">contact us</a>
        <a class="text-color" href="http://customerservices.com">customer services</a>
        <a class="text-color" href="http://return.com">return</a>
        <a class="text-color" href="http://trackyourparcel.com">track your parcel</a>
-
+<script>
+  var urlobject = new URL(window.location.href);
+var params = urlobject.searchParams;
+let orderid = params.get("order_id");
+  var myorder = document.getElementById("orderid");
+  myorder.textContent = "your order id : " + orderid;
+</script>
 </body>
 </html>
