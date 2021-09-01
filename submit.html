@@ -12,28 +12,32 @@
     <title>Orinoco</title>
 </head>
 <body>
- <div class="mainpage">
+ <div class="submit_order">
  <div class="grid-container">
     <div class="header">
     <a class="nav-logo"href="/index.html">Orinoco</a>
         </div>
   </div>
-    </div>
+    
+    <div class="orderc">
  <h1>YOUR ORDER IS CONFIRMED</h1>
  <H2>THANK YOU</H2>
  <span id="orderid"></span>
+ </div>
           <div class="footer">
         <div class="nav-logo">Orinoco</div>
        <a class="text-color" href="http://contactus.com">contact us</a>
        <a class="text-color" href="http://customerservices.com">customer services</a>
        <a class="text-color" href="http://return.com">return</a>
        <a class="text-color" href="http://trackyourparcel.com">track your parcel</a>
+       </div>
+       </div>
 <script>
   var urlobject = new URL(window.location.href);
 var params = urlobject.searchParams;
 let orderid = params.get("order_id");
   var myorder = document.getElementById("orderid");
-  myorder.textContent = "your order id : " + orderid;
+  myorder.textContent = "Your order id : " + orderid;
 </script>
 </body>
 </html>

@@ -50,7 +50,7 @@ var cartPrice = document.createElement("span");
     cartRemove.remove(product.count);
      cartRemove.addEventListener("click", (e) => {
         summary.filter(p => {
-            return p._id != cameraid._id
+            return p._id != cartItems._id
         })
     })
     alignItem.appendChild(cartRemove);  
