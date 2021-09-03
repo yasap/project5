@@ -1,6 +1,6 @@
 .mainpage {
-    background-color: rgb(161, 209, 224);
-
+    background-color: white;
+    height: 700px;
 }
 body{
     margin: 0 auto;
@@ -111,8 +111,12 @@ a.nav-logo,.nav-logo{
     justify-content:space-around;
 }
 .footer {
+    display: none;
     background-color: rgba(160, 21, 21, 0.836);
-   padding: 15px ;
+   /* padding: 15px ; */
+   position: absolute;
+   width: 100%;
+   bottom: 0;
 }
 .footer a {
     display: flex;
@@ -141,6 +145,7 @@ a.nav-logo,.nav-logo{
   .basketicon {
 justify-content: right;
 color: darkorange !important ;
+font-size: 50px !important ;
   }
 .cartsum {
     display: flex;
@@ -238,7 +243,7 @@ background-color:rgb(226, 236, 207);
     border-radius: 25px;
     display:flex;
     flex-direction: column;
-    width: 50%;
+    width: 90%;
     align-self: center;
     margin: 30px auto;
     margin-bottom: 5px ;
@@ -275,9 +280,10 @@ padding: 70px;
     border-radius: 25px;
     display:flex;
     flex-direction: row;
-    width: 75%;
+    width: 95%;
+    height: 500px;
     align-self: center;
-   margin: 5px auto;
+   margin: 15px auto;
     justify-content: center;
     padding: 0 auto;
 }
@@ -285,6 +291,7 @@ padding: 70px;
     border-top-left-radius: 25px;
     border-bottom-left-radius: 25px;
     height: 100%;
+    width: 500px;
 }
 .orderc {
 background-color:rgb(226, 236, 207);
@@ -303,14 +310,15 @@ padding: 65px;
         align-content:flex-end;
         padding: 0 0 5px 0;
     }
-         #detaillist {
+     #detaillist {
     border: 1px solid gray;
     border-radius: 25px;
     display:flex;
     flex-direction: row;
-    width: 75%;
+    width: 95%;
+    height: 600px;
     align-self: center;
-   margin: 5px auto;
+   margin: 15px auto;
     justify-content: center;
     padding: 0 auto;
 }
@@ -318,6 +326,7 @@ padding: 65px;
     border-top-left-radius: 25px;
     border-bottom-left-radius: 25px;
     height: 100%;
+    width: 700px;
 }
 .orderc {
 background-color:rgb(226, 236, 207);

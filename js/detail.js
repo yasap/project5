@@ -19,6 +19,7 @@ fetch("http://localhost:3000/api/cameras/" + cameraid).then(response => response
     dettitle.textContent = Camera.name;
     description.appendChild(dettitle);
     let ul = document.createElement("ul");
+    ul.textContent = 'Lenses:';
     Camera.lenses.forEach(lense => {
         let li = document.createElement("li");
         li.textContent = lense;
@@ -36,7 +37,7 @@ fetch("http://localhost:3000/api/cameras/" + cameraid).then(response => response
     var basketicon = document.createElement("span");
     basketicon.classList.add("basketicon");
     basketicon.classList.add("fa");
-    basketicon.classList.add("fa-shopping-basket");
+    basketicon.classList.add("fa-cart-plus");
     description.appendChild(basketicon);
     const storage = window.localStorage;
      const cart = (storage.getItem("cart") !=null) ? JSON.parse(storage.getItem("cart")) :[];
