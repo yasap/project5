@@ -1,6 +1,6 @@
 .mainpage {
     background-color: white;
-    height: 700px;
+
 }
 body{
     margin: 0 auto;
@@ -152,6 +152,7 @@ font-size: 50px !important ;
     flex-direction:column;
     margin-left: 15px;
     padding-top:10px;
+    height: 100%;
 }
 #cart-order {
     margin: 10px;
@@ -218,7 +219,7 @@ color: cornsilk;
 border-radius: 5px;
 }
 .orderc {
-background-color:rgb(226, 236, 207);
+background-color: white;
 }
 #orderid {
     font-size: x-large;
@@ -253,12 +254,11 @@ background-color:rgb(226, 236, 207);
 
 }
 .Detailimage  {
-   
     width: 100%;
     height: 100%;
 } 
 .orderc {
-background-color:rgb(226, 236, 207);
+background-color:white;
 padding: 70px;
 }}
 
@@ -281,7 +281,6 @@ padding: 70px;
     display:flex;
     flex-direction: row;
     width: 95%;
-    height: 500px;
     align-self: center;
    margin: 15px auto;
     justify-content: center;
@@ -294,8 +293,9 @@ padding: 70px;
     width: 500px;
 }
 .orderc {
-background-color:rgb(226, 236, 207);
+background-color:white;
 padding: 65px;
+font-weight: 700;
 }}
 /* large device */
 @media screen and (min-width: 1024px) {
@@ -329,7 +329,10 @@ padding: 65px;
     width: 700px;
 }
 .orderc {
-background-color:rgb(226, 236, 207);
-padding: 50px;
-padding-bottom: 170px;
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
+    font-weight:bolder;
+    font-size: 30px;
+    align-items: center;
 }}
