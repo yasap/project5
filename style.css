@@ -106,7 +106,7 @@ a.nav-logo,.nav-logo{
 }
 .options{
     display: flex;
-    flex: row;
+    flex-direction: row;
     align-items: center;
     justify-content:space-around;
 }
@@ -214,8 +214,10 @@ margin-right: 25px;
     text-align: center;
 }
 #submit {
-background-color: coral;
-color: cornsilk;
+background-color: rgb(248, 196, 177);
+color:black;
+font-size: 13px;
+text-align: center;
 border-radius: 5px;
 }
 .orderc {
@@ -249,7 +251,7 @@ background-color: white;
     margin: 30px auto;
     margin-bottom: 5px ;
     justify-content: center;
-    padding: 0 auto;
+    padding: 0;
     padding-bottom: 10px;
 
 }
@@ -260,6 +262,7 @@ background-color: white;
 .orderc {
 background-color:white;
 padding: 70px;
+align-items: center;
 }}
 
 
@@ -284,7 +287,7 @@ padding: 70px;
     align-self: center;
    margin: 15px auto;
     justify-content: center;
-    padding: 0 auto;
+    padding: 0 ;
 }
 .Detailimage  {
     border-top-left-radius: 25px;
@@ -296,6 +299,7 @@ padding: 70px;
 background-color:white;
 padding: 65px;
 font-weight: 700;
+align-items: center;
 }}
 /* large device */
 @media screen and (min-width: 1024px) {
@@ -320,7 +324,7 @@ font-weight: 700;
     align-self: center;
    margin: 15px auto;
     justify-content: center;
-    padding: 0 auto;
+    padding: 0 ;
 }
 .Detailimage  {
     border-top-left-radius: 25px;

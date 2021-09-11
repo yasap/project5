@@ -25,9 +25,11 @@ cartItems.forEach((item, index) => {
     }
 })
 const showCartItems = (summary) => {
-    while (cart.hasChildNodes()) {
-        cart.removeChild(cart.childNodes[0]);
-    }
+    let rows = Array.from(cart.children);
+    rows.forEach((row,index) => {
+        if (index > 0) cart.removeChild(row);
+      
+  })
     var sum = 0;
 summary.forEach(product => {
     var amount = (product.price * product.count);
@@ -50,11 +52,11 @@ summary.forEach(product => {
     var cartRemove = document.createElement("span");
     cartRemove.classList.add("fa");
     cartRemove.classList.add("fa-trash");
-    cartRemove.remove(product.count);
+     alignItem.appendChild(cartRemove); 
      cartRemove.addEventListener("click", (e) => {
          summary = summary.filter(p => {
              cartItems = cartItems.filter(c=>{
-                 return c._id = product._id;
+                 return c._id != product._id;
              })
              storage.setItem("cart",JSON.stringify(cartItems));
              return p._id != product._id;
@@ -62,7 +64,7 @@ summary.forEach(product => {
          showCartItems(summary);
       
     })
-    alignItem.appendChild(cartRemove);  
+    
     cart.appendChild(alignItem);
  
 })
